@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Searching Test</h3>
+    <form action = "{% url 'result' %}" method = "GET"> <!-- 바로 result.html로 넘어가도록 -->
+        <input type = "search" value = "" name = 'searching'/> <!-- 검색어 얻어내기 위해 name 추가 -->
+        <input type = "submit" value = "search">
+    </form>
+</body>
+</html>
