@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>hackaton sample</title>
+        <!--head부분 css/bootstrap 스크립트 추가부분 따로 빼던가 안빼도 되고-->
+         {% load staticfiles %}
+         <link rel="stylesheet" href="{% static 'css/main.css' %}?ver=1.1" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+    </head>
+    <!--header수정요함-->
+    <body style="margin:0px;">
+    <div class = "header">
+        <div class ="head">
+  <ul class="pull-right">
+     <!--<a href="./main.html"><img src="./logo.png" width=100px height=50px></a>-->
+       
+                
+                <li><a href="#">HOME</a></li>
+                <li><a href="{%url 'index'%}">SEARCH</a></li>
+
+                <li class="pull-left"><a href="#">TEXTAREA</a></li>
+                <li class="pull-left"><a href="#">TEXTAREA</a></li>
+                
+            </ul>
+          
+        </div>
+        <div class = "logo">
+           <h1>cafe project</h1>
+           
+
+        </div>
+    </div>
+ 
+
+         <!--1-->
+
+    
+        <div class="mid mx-4 shadow p-3 mb-0 bg-white rounded">
+            <div class="col-md-10 mx-auto">
+                <div class="container">
+                <div id="product" class="col-md-6 mx-auto">
+                    <div class="text-center mt-5 mb-5">
+                        <div class="product-title font-weight-bold sectionheader">
+                            <h3>내용</h3>
+                        </div>
+                        <div class="product-description text-muted">
+                           어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    
+
+        <!--2--> 
+        <div class="mt-5 pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 p-0">
+                        <div class="text-center">
+                            <figure class="pt-3">
+                                <i class="fas fa-cat mb-4 comments-icon"></i>
+                            </figure>
+                            <div>
+                                <h5 class="font-weight-bold">내용</h5>
+                            </div>
+                            <div class="text-muted px-2 detail-description">
+                                <p>어쩌고저쩌고는 어쩌고저쩌곤데 어쩌고저쩌고가 어쩌고저꺼고</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 p-0">
+                        <div class="text-center">
+                            <figure class="pt-3">
+                                <i class="fas fa-gift mb-4 user-check-icon"></i>
+                            </figure>
+                            <div>
+                                <h5 class="font-weight-bold">내용</h5>
+                            </div>
+                            <div class="text-muted px-2 detail-description">
+                                <p>어쩌고저쩌고는 어쩌고저쩌곤데 어쩌고저쩌고가 어쩌고저꺼고</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-0">
+                        <div class="text-center">
+                            <figure class="pt-3">
+                                <i class="fas fa-store mb-4 fingerprint-icon"></i>
+                            </figure>
+                            <div>
+                                <h5 class="font-weight-bold">내용</h5>
+                            </div>
+                            <div class="text-muted px-2 detail-description">
+                                <p>어쩌고저쩌고는 어쩌고저쩌곤데 어쩌고저쩌고가 어쩌고저꺼고 </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--end-->
+
+   
+   <!--나중에 추가할 main부분 생길시 이 container에서 작업-->
+<center>
+    <div class="container">
+        <div class = "body">
+             
+        
+             
+        </div>
+    
+
+    </div>
+</center>
+
+<!--지울수 있으면 지우고 아니면 그냥 두고 -->
+   <div class ="footer">
+    <p>멋쟁이 사자처럼 메인 샘플 </p>
+    <h4>SAMPLE sample sample SAMPLE</h4>
+      
+
+    </div>
+
+     </body>
+</html>
