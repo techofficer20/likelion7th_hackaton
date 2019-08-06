@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+
+{% block import %}
+{% endblock%}
+
+
+
+{% block contents %}
+
+    <br><br>
+    <div class="container">
+        <div class="alert alert-danger" role="alert">
+            <h4> 👑 BEST 👑 </h4>
+        </div>
+        <br>
+        <a class="alert alert-danger" href="{% url 'write' %}" role="button"> POST </a>
+        <div>
+            <br><br>
+            {% for post in postss %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="{{ post.image.url }}" alt=" Card image cap">
+                    <div class="card-body">
+                        <!--카페이름-->
+                        <h5>{{ post.title }}</h5>
+                         <!--카페요약-->
+                        <p class="card-text">{{ post.summary }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">카페 위치 넣는 자리 </small>
+                        </div>
+                        <br>
+                        <a class="alert alert-danger" href="{% url 'detail' post.id %}" role="button"> 자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+
+
+
+
+
+       <!--pagination-->
+        <br><br>
+        <div>
+            {%if postss.has_previous%}
+            <a class="alert alert-danger" href="?page={{postss.previous_page_number}}" role="button">이전 페이지</a>
+            {%endif%}
+
+            <a class="alert alert-danger">
+                <span>{{postss.number}}</span>
+                <span> / </span>
+                <span>{{postss.paginator.num_pages}}</span>
+            </a>
+
+            {%if postss.has_next%}
+            <a class="alert alert-danger" href="?page={{postss.next_page_number}}" role="button">다음 페이지</a>
+            {%endif%}
+            <br><br><br>
+        </div>
+
+
+    </div>
+{% endblock %}
