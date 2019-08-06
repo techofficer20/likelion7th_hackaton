@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'searchapp.apps.SearchappConfig',
     'mainpage.apps.MainpageConfig',
     'startpage.apps.StartpageConfig',
+    'tagapp.apps.TagappConfig',
 ]
 
 MIDDLEWARE = [
