@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect
-
+from .models import Post
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    post = Post.objects.all()
+    return render(request, 'index.html', {'post' : post})
 
 def result(request):
+    post = Post.objects.all()
     obj = request.GET['searching'] # 검색어 데이터 얻어냄
-    return render(request, 'result.html', {'obj' : obj}) # 검색어 데이터를 html에 표현하기 위해 딕셔너리 추가
+    return render(request, 'result.html', {'post' : post, 'obj' : obj}) # 검색어 데이터를 html에 표현하기 위해 딕셔너리 추가

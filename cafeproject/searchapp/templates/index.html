@@ -12,5 +12,10 @@
         <input type = "search" value = "" name = 'searching'/> <!-- 검색어 얻어내기 위해 name 추가 -->
         <input type = "submit" value = "search">
     </form>
+    <br/>
+    <h2>현재 카페 목록</h2>
+    {% for post_obj in post %}
+        <li>{{ post_obj.title }}</li>
+    {% endfor %}
 </body>
 </html>
