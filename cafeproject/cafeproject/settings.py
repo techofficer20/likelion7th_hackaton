@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'searchapp.apps.SearchappConfig',
     'mainpage.apps.MainpageConfig',
+    'startpage.apps.StartpageConfig',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +113,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'mainpage', 'static'),
+    os.path.join(BASE_DIR, 'startpage', 'static'),
 
 ]
 

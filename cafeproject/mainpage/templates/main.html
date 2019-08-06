@@ -6,6 +6,7 @@
         <!--head부분 css/bootstrap 스크립트 추가부분 따로 빼던가 안빼도 되고-->
          {% load staticfiles %}
          <link rel="stylesheet" href="{% static 'css/main.css' %}?ver=1.1" >
+         <script type="text/javascript" src="{% static "js/main.js" %}"></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +21,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
     </head>
+
     <!--header수정요함-->
     <body style="margin:0px;">
     <div class = "header">
@@ -46,6 +48,25 @@
  
 
          <!--1-->
+
+         <!--<form id="content">
+         <input type="text" name="input" class="input" id="search-input">
+         <button type="reset" class="search" id="search-btn"></button>
+         </form>-->
+
+         <div class="search-overlay"></div>
+<div class="scroll-cont">
+  <div class="content">
+    <div class="search">
+      <div class="search__bg"></div>
+      <div class="search__box">
+        <input type="text" class="search__input" placeholder="Search"/>
+        <div class="search__line"></div>
+        <div class="search__close"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
     
         <div class="mid mx-4 shadow p-3 mb-0 bg-white rounded">
