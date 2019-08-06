@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'searchapp.apps.SearchappConfig',
     'mainpage.apps.MainpageConfig',
+    'tagapp'
 ]
 
 MIDDLEWARE = [
