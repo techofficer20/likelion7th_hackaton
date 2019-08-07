@@ -9,8 +9,9 @@
 <body>
     <h3 id = "result">"{{ obj }}"에 대한 검색 결과입니다.</h3> <!-- views.py에서 불러들인 데이터를 사용 -->
     {% for post_obj in post %}
-        {% if post_obj.tag_body == obj or post_obj.title == obj or post_obj.location == obj %} <!-- 아직은 제목이 완전히 같은 것만 계산됩니다 ㅠㅠ -->
-            <li>{{ post_obj.title }} - {{ post_obj.location }}</li>
+        {% if post_obj.tag_body == obj or post_obj.title == obj or post_obj.location == obj %}
+        <!-- 아직은 제목이 완전히 같은 것만 계산됩니다 ㅠㅠ -->
+            <li>{{ post_obj.title }} - {{ post_obj.location }}-{{post_obj.starrate}}</li>
         {% endif %}
     {% endfor %}
 </body>
