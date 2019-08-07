@@ -8,9 +8,10 @@
 </head>
 <body>
     <h3 id = "result">"{{ obj }}"에 대한 검색 결과입니다.</h3> <!-- views.py에서 불러들인 데이터를 사용 -->
-    {% for post_obj in post %}
-        {% if post_obj.tag_body == obj or post_obj.title == obj or post_obj.location == obj %}
-            <li>{{ post_obj.title }} - {{ post_obj.location }}-{{post_obj.starrate}}</li>
+    
+    {% for post_obj in post %} 
+        {% if post_obj.title == obj_list.0 and post_obj.location == obj_list.1 and post_obj.tag_body == obj_list.2 %}
+            <li>{{post_obj.title}} - {{post_obj.location}} (태그: {{post_obj.tag_body}})</li>
         {% endif %}
     {% endfor %}
 </body>
