@@ -23,20 +23,19 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mainpage/',mainpage.views.main, name="main"),
-    path('',startpage.views.start,name="start"),
+    path('mainpage/', mainpage.views.main, name="main"),
+    path('', startpage.views.start, name="start"),
     path('searchapp', include('searchapp.urls')),
-    path('post/', postapp.views.post, name = "post"),
-    path('post/<int:post_id>/', postapp.views.detail, name = "detail"),
-    path('post/write/', postapp.views.write, name = "write"),
+    path('post/', postapp.views.post, name="post"),
+    path('post/<int:post_id>/', postapp.views.detail, name="detail"),
+    path('post/write/', postapp.views.write, name="write"),
     path('post/create/', postapp.views.create, name='create'),
-    
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('post/comment/<int:post_id>', postapp.views.comment, name="comment"),
+
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL,
                           document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
-
-

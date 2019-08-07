@@ -37,5 +37,27 @@
         <br>
     </div>
     <br>
+      <!--댓글달기 소스는 여기에--> 
+      {% for comment in comments%} 
+        <div class="comment">
+          <div class="date">{{comment.date}}</div>
+          <strong>{{comment.author}}</strong>
+          <p>{{ comment.comment }}</p>
+        </div>
+       
+        {% endfor %}
+           <br>
+       <!--댓글 폼 -->
+    <form action="{% url 'comment' post_id %}" method="POST"> 
+      {% csrf_token %}
+         <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="덧글을 남겨주세요!" name="text" id="text" aria-describedby="button-addon2">
+          </input>
+          <div class="input-group-append">
+             <input class="btn btn-outline-secondary" type="submit" id="button-addon2" value="댓글"></input>
+          </div>
+      </div>
+      </form>
 </div>
+
 {% endblock %}
