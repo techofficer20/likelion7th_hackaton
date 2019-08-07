@@ -10,3 +10,7 @@ class Post(models.Model):
     starrate = models.SmallIntegerField(choices=one_to_five_chocies, default=3)
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ['-starrate']    
+
