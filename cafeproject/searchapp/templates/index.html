@@ -15,7 +15,7 @@
     <br/>
     <h2>현재 카페 목록</h2>
     {% for post_obj in post %}
-        <li>{{ post_obj.title }}</li>
+        <li>{{ post_obj.title }} - {{ post_obj.location }} (태그: {{ post_obj.tag_body }})</li>
     {% endfor %}
 </body>
 </html>
