@@ -17,22 +17,22 @@
     <h3>Tag Search</h3>
         <fieldset>
             <legend>location</legend>
-             {% for post_obj in post%}
-             <input type = "checkbox" value= "location">{{post_obj.location}}
+             {% for location in location_list %}
+             <input type = "checkbox" value= "location">{{location.location}}
              {% endfor %}
         </fieldset>
 
         <fieldset>
-            <legend>mood</legend>
-             {% for post_obj in post%}
-             <input type = "checkbox" value= "mood">{{post_obj.mood}}
+            <legend>feature</legend>
+             {% for feature in feature_list %}
+             <input type = "checkbox" value= "feature">{{feature.feature}}
              {% endfor %}
         </fieldset>
 
         <fieldset>
-            <legend>singularity</legend>
-             {% for post_obj in post%}
-             <input type = "checkbox" value= "singularity">{{post_obj.singularity}}
+            <legend>heart</legend>
+             {% for heart in heart_list %}
+             <input type = "checkbox" value= "heart">{{heart.heart}}
              {% endfor %}
         </fieldset>
 

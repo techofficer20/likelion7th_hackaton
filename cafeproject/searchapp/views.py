@@ -1,10 +1,19 @@
 from django.shortcuts import render, redirect
-from .models import Post
+from .models import Post, Location, Feature, Heart
 # Create your views here.
 
 def index(request):
     post = Post.objects.all()
-    return render(request, 'index.html', {'post' : post})
+    location_list = Location.objects.all()
+    feature_list = Feature.objects.all()
+    heart_list = Heart.objects.all()
+    return render(request, 'index.html', 
+    {
+        'post' : post, 
+        'location_list' : location_list,
+        'feature_list' : feature_list,
+        'heart_list' : heart_list
+    })
 
 def result(request):
     post = Post.objects.all()

@@ -14,3 +14,20 @@ class Post(models.Model):
     class Meta:
         ordering = ['-starrate']    
 
+class Location(models.Model):
+    location = models.CharField(max_length = 10)
+
+    def __str__(self):
+        return self.location
+
+class Feature(models.Model):
+    feature = models.CharField(max_length = 15)
+
+    def __str__(self):
+        return self.feature
+
+class Heart(models.Model):
+    heart = models.CharField(max_length = 3)
+
+    def __str__(self):
+        return self.heart
