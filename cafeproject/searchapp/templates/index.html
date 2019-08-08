@@ -13,6 +13,33 @@
         <input type = "submit" value = "search">
     </form>
     <br/>
+    <br/>
+    <h3>Tag Search</h3>
+        <fieldset>
+            <legend>location</legend>
+             {% for post_obj in post%}
+             <input type = "checkbox" value= "location">{{post_obj.location}}
+             {% endfor %}
+        </fieldset>
+
+        <fieldset>
+            <legend>mood</legend>
+             {% for post_obj in post%}
+             <input type = "checkbox" value= "mood">{{post_obj.mood}}
+             {% endfor %}
+        </fieldset>
+
+        <fieldset>
+            <legend>singularity</legend>
+             {% for post_obj in post%}
+             <input type = "checkbox" value= "singularity">{{post_obj.singularity}}
+             {% endfor %}
+        </fieldset>
+
+        <br/>
+        <input type="submit" value="tag searh">
+        <br/>
+        <br/>
     <h2>현재 카페 목록</h2>
     {% for post_obj in post %}
         <li>{{ post_obj.title }} - {{ post_obj.location }} (태그: {{ post_obj.tag_body }})</li>
