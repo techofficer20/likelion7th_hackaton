@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Searching Test</h3>
+    <form action = "{% url 'result' %}" method = "GET"> <!-- 바로 result.html로 넘어가도록 -->
+        <input type = "search" value = "" name = 'searching'/> <!-- 검색어 얻어내기 위해 name 추가 -->
+        <input type = "submit" value = "search">
+    </form>
+    <br/>
+    <br/>
+    <h3>Tag Search</h3>
+        <fieldset>
+            <legend>location</legend>
+             {% for location in location_list %}
+             <input type = "checkbox" value= "location">{{location.location}}
+             {% endfor %}
+        </fieldset>
+
+        <fieldset>
+            <legend>feature</legend>
+             {% for feature in feature_list %}
+             <input type = "checkbox" value= "feature">{{feature.feature}}
+             {% endfor %}
+        </fieldset>
+
+        <fieldset>
+            <legend>star</legend>
+             {% for star in star_list %}
+             <input type = "checkbox" value= "star">{{star.star}}
+             {% endfor %}
+        </fieldset>
+
+        <br/>
+        <input type="submit" value="tag searh">
+        <br/>
+        <br/>
+    <h2>현재 카페 목록</h2>
+    {% for post_obj in post %}
+        <li>{{ post_obj.title }} - {{ post_obj.location }} (태그: {{ post_obj.tag_body }}) star: {{post_obj.starrate}}</li>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,102 @@
+.head {
+  top: 60px;
+  height: 60px;
+  background: #ffffff;
+}
+.logo {
+  height: 100%;
+  background: #ffcccc;
+}
+
+.choice h1 {
+  font-family: "Shift", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.logo h1 {
+  font-family: "Shift", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 300px;
+}
+.choice {
+  height: 150px;
+  background: #cccccc;
+}
+
+.body span {
+  font-family: "Shift", sans-serif;
+  font-display: center;
+}
+.pull-right li {
+  float: center;
+  display: inline;
+  padding: 10px 10px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+.pull-right ul {
+  display: inline;
+}
+.pull-right a {
+  color: black;
+  font-display: right;
+  font-weight: bold;
+  padding: 10px 10px;
+  padding-top: 10px;
+  text-decoration: none;
+}
+.pull-left {
+  float: right;
+  color: black;
+  font-display: right;
+  font-weight: bold;
+  padding: 10px 10px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+.footer {
+  text-align: center;
+  background-color: #ffffff;
+  height: 150px;
+}
+
+.container {
+  padding: 40px;
+  height: 500px;
+  background-color: #ffffff;
+  /*border-bottom: 1px solid #dbdbdb;*/
+}
+.body {
+  margin: 0px;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+.button {
+  width: 60px;
+  height: 20px;
+}
+.figure {
+  padding-left: 150px;
+}
+.text {
+  float: right;
+  padding-left: 70px;
+  font-family: "Shift", sans-serif;
+}
