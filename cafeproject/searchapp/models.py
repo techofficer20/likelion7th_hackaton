@@ -26,8 +26,8 @@ class Feature(models.Model):
     def __str__(self):
         return self.feature
 
-class Heart(models.Model):
-    heart = models.CharField(max_length = 3)
+class Star(models.Model):
+    star = models.CharField(max_length = 3)
 
     def __str__(self):
-        return self.heart
+        return self.star
