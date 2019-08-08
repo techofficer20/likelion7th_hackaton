@@ -9,39 +9,28 @@
          <button type="reset" class="search" id="search-btn"></button>
          </form>-->
 {% block contents %}
-<div class="search-overlay"></div>
-<div class="scroll-cont">
-  <div class="content">
-    <div class="search">
-      <div class="search__bg"></div>
-      <div class="search__box">
-        <input type="text" class="search__input" placeholder="Search"/>
-        <div class="search__line"></div>
-        <div class="search__close"></div>
-      </div>
-    </div>
-  </div>
-</div>
 
     
-        <div class="mid mx-4 shadow p-3 mb-0 bg-white rounded">
-            <div class="col-md-10 mx-auto">
-                <div class="container">
-                <div id="product" class="col-md-6 mx-auto">
-                    <div class="text-center mt-5 mb-5">
-                        <div class="product-title font-weight-bold sectionheader">
-                            <h3>내용</h3>
-                        </div>
-                        <div class="product-description text-muted">
-                           어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고어쩌고 저쩌고
-                        </div>
-                    </div>
-                </div>
+     <!--1-->
+     <div class="row">
+        {% for post in postss %}
+        
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="{{ post.image.url }}" alt=" Card image cap">
+            <div class="card-body">
+            <h5>{{ post.title }}</h5>
+              <p class="card-text">{{ post.summary }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">카페 위치 넣는 자리 </small>
+                <a class="alert alert-danger" href="{% url 'detail' post.id %}" role="button"> 자세히 보기</a>
+                
+              </div>
             </div>
+          </div>
         </div>
-
-
-    
+        {% endfor %}
+    </div>
 
         <!--2--> 
         <div class="mt-5 pt-5">

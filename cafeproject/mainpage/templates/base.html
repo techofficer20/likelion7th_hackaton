@@ -5,7 +5,7 @@
         <title>hackaton sample</title>
         <!--head부분 css/bootstrap 스크립트 추가부분 따로 빼던가 안빼도 되고-->
          {% load staticfiles %}
-         <link rel="stylesheet" href="{% static 'css/main.css' %}?ver=1.1" >
+         <link rel="stylesheet" href="{% static 'css/main.css' %}?ver=1.2" >
          <script type="text/javascript" src="{% static "js/main.js" %}"></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,6 +31,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+         <!-- Bootstrap core CSS -->
+      <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     
+       
+        
 
         <!--header-->
          <div class ="head">
@@ -40,6 +45,7 @@
                 
                 <li><a href="{%url 'start'%}">HOME</a></li>
                 <li><a href="{%url 'index'%}">SEARCH</a></li>
+                
 
                 <li class="pull-left"><a href="#">TEXTAREA</a></li>
                 <li class="pull-left"><a href="{% url 'post' %}">POST</a></li>
@@ -60,7 +66,7 @@
        
         <div class = "logo">
            <h1>cafe project</h1>
-           
+            
 
         </div>
     </div>
