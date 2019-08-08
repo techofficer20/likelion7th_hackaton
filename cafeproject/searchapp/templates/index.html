@@ -42,7 +42,7 @@
         <br/>
     <h2>현재 카페 목록</h2>
     {% for post_obj in post %}
-        <li>{{ post_obj.title }} - {{ post_obj.location }} (태그: {{ post_obj.tag_body }}) star: {{post_obj.starrate}}</li>
+        <li>{{ post_obj.title }} - {{ post_obj.location }} (feature: {{ post_obj.feature }}) star: {{post_obj.starrate}}</li>
     {% endfor %}
 </body>
 </html>

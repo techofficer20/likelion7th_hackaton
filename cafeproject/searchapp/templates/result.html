@@ -10,12 +10,12 @@
     <h3 id = "result">"{{ obj }}"에 대한 검색 결과입니다.</h3> <!-- views.py에서 불러들인 데이터를 사용 -->
     {% for post_obj in post %} 
         
-        {% if post_obj.title == obj_list.0 and post_obj.location == obj_list.1 and post_obj.tag_body == obj_list.2 %}
-            <li>{{post_obj.title}} - {{post_obj.location}} (태그: {{post_obj.tag_body}}) star: {{post_obj.starrate}}</li>
+        {% if post_obj.title == obj_list.0 and post_obj.location == obj_list.1 and post_obj.feature == obj_list.2 %}
+            <li>{{post_obj.title}} - {{post_obj.location}} (feature: {{post_obj.feature}}) star: {{post_obj.starrate}}</li>
         {% endif %}
         
-        {% if post_obj.title == obj or post_obj.location == obj or post_obj.tag_body == obj %}
-            <li>{{post_obj.title}} - {{post_obj.location}} (태그: {{post_obj.tag_body}}) star: {{post_obj.starrate}}</li>
+        {% if post_obj.title == obj or post_obj.location == obj or post_obj.feature == obj %}
+            <li>{{post_obj.title}} - {{post_obj.location}} (feature: {{post_obj.feature}}) star: {{post_obj.starrate}}</li>
         {% else %}
             <h4>검색 결과가 없습니다.</h4>
         {% endif %}
