@@ -18,6 +18,7 @@ from django.urls import path, include
 import mainpage.views
 import startpage.views
 import postapp.views
+import accounts2.views
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -31,6 +32,11 @@ urlpatterns = [
     path('post/write/', postapp.views.write, name="write"),
     path('post/create/', postapp.views.create, name='create'),
     path('post/comment/<int:post_id>', postapp.views.comment, name="comment"),
+
+    path('accounts2/', include('accounts2.urls')),
+
+
+
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

@@ -32,6 +32,8 @@ INSTALLED_APPS = [
     'startpage.apps.StartpageConfig',
     'tagapp.apps.TagappConfig',
     'postapp.apps.PostappConfig',
+    'accounts2.apps.Accounts2Config',
+
 ]
 
 MIDDLEWARE = [
@@ -117,6 +119,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'mainpage', 'static'),
     os.path.join(BASE_DIR, 'startpage', 'static'),
     os.path.join(BASE_DIR, 'postapp', 'static'),
+
 
 ]
 
