@@ -19,10 +19,13 @@
             <br><br>
         <div class="row">
         {% for post in postss %}
+
+        
         
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{ post.image.url }}" alt=" Card image cap">
+            <!--<img class="card-img-top" src="{{ post.image.url }}" alt=" Card image cap">-->
+            <img src="{{ post.image.url }}" alt="..." class="img-thumbnail">
             <div class="card-body">
             <h5>{{ post.title }}</h5>
               <p class="card-text">{{ post.summary }}</p>

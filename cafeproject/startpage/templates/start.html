@@ -5,9 +5,26 @@
         <title>hackaton sample</title>
         <!--head부분 css/bootstrap 스크립트 추가부분 따로 빼던가 안빼도 되고-->
         {% load staticfiles %}
-         <link rel="stylesheet" href="{% static 'css/start.css' %}?ver=1.1" >
+         <link rel="stylesheet" href="{% static 'css/start.css' %}?ver=1.5" >
         <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Lato&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+        <!--header-->
+      <div class ="head">
+        <ul class="header">
+   
+                
+                <li class="pull-right"><a href="{%url 'start'%}">HOME</a></li>
+                <li class="pull-right"><a href="{%url 'index'%}">SEARCH</a></li>
+                
+
+                <li class="pull-left"><a href="#">TEXTAREA</a></li>
+                <li class="pull-left"><a href="{% url 'post' %}">POST</a></li>
+
+                
+            </ul>
+          
+        </div>
+    
     </head>
 
     <!--body 시작-->

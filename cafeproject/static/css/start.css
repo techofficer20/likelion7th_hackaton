@@ -5,7 +5,7 @@ body {
   text-align: center;
 }
 i {
-  padding-top: 250px;
+  padding-top: 150px;
   display: block;
   width: 500px;
   color: #fff;
@@ -55,4 +55,41 @@ i {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.pull-right {
+  float: left;
+  padding: 10px 10px;
+  padding-right: 10px;
+  display: inline;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header {
+  display: inline;
+}
+/*.pull-right a {
+  color: black;
+  font-display: right;
+  font-weight: bold;
+  padding: 10px 10px;
+  padding-top: 10px;
+  text-decoration: none;
+}*/
+.pull-left {
+  float: right;
+  color: black;
+  font-display: right;
+  font-weight: bold;
+  padding: 10px 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  display: inline;
+}
+.head {
+  top: 60px;
+  height: 60px;
+  background: #ffffff;
 }
