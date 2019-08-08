@@ -1,0 +1,95 @@
+body {
+  background: #ffcccc;
+
+  font-weight: 100;
+  text-align: center;
+}
+i {
+  padding-top: 150px;
+  display: block;
+  width: 500px;
+  color: #fff;
+  font-size: 52px;
+  margin: 0 auto;
+  font-style: normal;
+  font-family: "Lato", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
+}
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.search1 {
+  width: 100%;
+  border: 3px solid #fff;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.search1:focus {
+  color: #ffcccc;
+}
+
+.searchbtn {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #fff;
+  background: #fff;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.content {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pull-right {
+  float: left;
+  padding: 10px 10px;
+  padding-right: 10px;
+  display: inline;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header {
+  display: inline;
+}
+/*.pull-right a {
+  color: black;
+  font-display: right;
+  font-weight: bold;
+  padding: 10px 10px;
+  padding-top: 10px;
+  text-decoration: none;
+}*/
+.pull-left {
+  float: right;
+  color: black;
+  font-display: right;
+  font-weight: bold;
+  padding: 10px 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  display: inline;
+}
+.head {
+  top: 60px;
+  height: 60px;
+  background: #ffffff;
+}
