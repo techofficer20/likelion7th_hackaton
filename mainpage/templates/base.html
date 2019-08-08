@@ -67,13 +67,7 @@
             <form id="logout" method="POST" action="{% url 'logout' %}">
                 {% csrf_token %} <input type="hidden" />
             </form>
-            {% else %}
-            <li class="nav-item">
-                <a class="nav-item nav-link" href="{% url 'signup' %}">Signup</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-            </li>
+            
             {% endif %}
 
 
