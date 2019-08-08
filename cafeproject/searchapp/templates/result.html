@@ -16,8 +16,9 @@
         
         {% if post_obj.title == obj or post_obj.location == obj or post_obj.tag_body == obj %}
             <li>{{post_obj.title}} - {{post_obj.location}} (태그: {{post_obj.tag_body}}) star: {{post_obj.starrate}}</li>
+        {% else %}
+            <h4>검색 결과가 없습니다.</h4>
         {% endif %}
-        
     {% endfor %}
 </body>
 </html>
