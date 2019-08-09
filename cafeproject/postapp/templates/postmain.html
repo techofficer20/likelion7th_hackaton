@@ -13,32 +13,18 @@
 {% block contents %}
 
 <div class="container">
+
   <div class="card-deck mb-3 text-center">
+  {% for post in postss %}
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">NAME</h4>
+        <h4 class="my-0 font-weight-normal">{{post.title}}</h4>
       </div>
       <div class="card-body">
-      <img src="{% static '1.jpeg'%}" height="310px" width="310px">
+      <img src="{{ post.image.url }}" height="310px" width="310px">
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">NAME</h4>
-      </div>
-      <div class="card-body">
-        <img src="{% static '2.jpeg'%}" height="310px" width="310px">
-      </div>
-    </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">NAME</h4>
-      </div>
-      <div class="card-body">
-       <img src="{% static '3.png'%}" height="310px" width="310px">
-      </div>
-    </div>
-    
+    {% endfor %}
   </div>
 
 
@@ -47,27 +33,7 @@
 
 
 
-    
-     <!--1-->
-     <div class="row">
-        {% for post in postss %}
-        
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{ post.image.url }}" alt=" Card image cap">
-            <div class="card-body">
-            <h5>{{ post.title }}</h5>
-              <p class="card-text">{{ post.summary }}</p>
-              <div class="d-flex justify-content-between align-items-center">
-              <small class="text-muted">카페 위치 넣는 자리 </small>
-                <a class="alert alert-danger" href="{% url 'detail' post.id %}" role="button"> 자세히 보기</a>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-    </div>
+  
 
         <!--2--> 
         <div class="mt-5 pt-5">

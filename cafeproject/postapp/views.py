@@ -4,6 +4,15 @@ from django.core.paginator import Paginator
 from .models import Post, Comment
 
 
+def postmain(request):
+    posts = Post.objects
+    post_list = Post.objects.all()
+    paginator = Paginator(post_list, 3)
+    page = request.GET.get('page')
+    postss = paginator.get_page(page)
+    return render(request, 'postmain.html', {'posts': posts, 'postss': postss, })
+
+
 def post(request):
     posts = Post.objects
     post_list = Post.objects.all()
@@ -11,6 +20,7 @@ def post(request):
     page = request.GET.get('page')
     postss = paginator.get_page(page)
     return render(request, 'post.html', {'posts': posts, 'postss': postss, })
+
 
 def result(request):
     obj_title = request.GET.get('title')
@@ -21,7 +31,8 @@ def result(request):
     paginator = Paginator(post_list, 3)
     page = request.GET.get('page')
     postss = paginator.get_page(page)
-    return render(request, 'result.html', {'obj_title' : obj_title, 'posts' : posts, 'postss' : postss, 'obj_location' : obj_location, 'obj_feature' : obj_feature})
+    return render(request, 'result.html', {'obj_title': obj_title, 'posts': posts, 'postss': postss, 'obj_location': obj_location, 'obj_feature': obj_feature})
+
 
 def detail(request, post_id):
     detail = get_object_or_404(Post, pk=post_id)
