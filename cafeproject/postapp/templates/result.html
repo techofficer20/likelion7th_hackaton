@@ -36,8 +36,8 @@
         <br><br>
         <div class="row">
             {% for post in postss %}
-
-
+            {% if post.title == obj_title and post.area == obj_location %}
+            {% if obj_feature in post.body %}
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                     <!--<img class="card-img-top" src="{{ post.image.url }}" alt=" Card image cap">-->
@@ -55,55 +55,28 @@
                     </div>
                 </div>
             </div>
-
-            <!--<div class = "row">
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img class="card-img-top" src="{{ post.image.url }}" alt=" Card image cap">
-                    <div class="card-body">
-                        
-                        <h5>{{ post.title }}</h5>
-                        
-                        <p class="card-text">{{ post.summary }}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <small class="text-muted">카페 위치 넣는 자리 </small>
-                        </div>
-                        <br>
-                        <a class="alert alert-danger" href="{% url 'detail' post.id %}" role="button"> 자세히 보기</a>
-                    </div>
-                </div>
-            </div>
-       </div>-->
-
+            {% endif %}
+            {% endif %}
             {% endfor %}
+            <!--pagination-->
+            <br><br>
+            <div>
+                {%if postss.has_previous%}
+                <a class="alert alert-danger" href="?page={{postss.previous_page_number}}" role="button">이전 페이지</a>
+                {%endif%}
+
+                <a class="alert alert-danger">
+                    <span>{{postss.number}}</span>
+                    <span> / </span>
+                    <span>{{postss.paginator.num_pages}}</span>
+                </a>
+
+                {%if postss.has_next%}
+                <a class="alert alert-danger" href="?page={{postss.next_page_number}}" role="button">다음 페이지</a>
+                {%endif%}
+                <br><br><br>
+            </div>
+
+
         </div>
-    </div>
-
-
-
-
-
-
-
-    <!--pagination-->
-    <br><br>
-    <div>
-        {%if postss.has_previous%}
-        <a class="alert alert-danger" href="?page={{postss.previous_page_number}}" role="button">이전 페이지</a>
-        {%endif%}
-
-        <a class="alert alert-danger">
-            <span>{{postss.number}}</span>
-            <span> / </span>
-            <span>{{postss.paginator.num_pages}}</span>
-        </a>
-
-        {%if postss.has_next%}
-        <a class="alert alert-danger" href="?page={{postss.next_page_number}}" role="button">다음 페이지</a>
-        {%endif%}
-        <br><br><br>
-    </div>
-
-
-</div>
-{% endblock %}
+        {% endblock %}

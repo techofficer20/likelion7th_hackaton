@@ -25,16 +25,14 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mainpage/', mainpage.views.main, name="main"),
-    path('mainpage/', mainpage.views.post, name="post"),
     path('', startpage.views.start, name="start"),
-    path('searchapp', include('searchapp.urls')),
     path('post/', postapp.views.post, name="post"),
     path('post/<int:post_id>/', postapp.views.detail, name="detail"),
     path('post/write/', postapp.views.write, name="write"),
     path('post/create/', postapp.views.create, name='create'),
     path('post/comment/<int:post_id>', postapp.views.comment, name="comment"),
     path('post/like/<int:post_id>', postapp.views.like, name="like"),
-
+    path('post/result/', postapp.views.result, name = 'result'),
     path('accounts2/', include('accounts2.urls')),
 
 

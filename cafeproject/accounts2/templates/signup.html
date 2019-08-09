@@ -8,13 +8,12 @@
 
 {% load staticfiles %}
 
-
 {% block contents %}
 
 
-<center>
+
 <div class="container">
-    <h1>SIGN UP</h1>
+    <h1>Sign Up!</h1>
 
     <form method="POST" action="{% url 'signup'%}">
 
@@ -35,6 +34,5 @@
         <input class="btn btn-primary" type="submit" value="Sign Up!">
     </form>
 </div>
-</center>
 
 {% endblock %}

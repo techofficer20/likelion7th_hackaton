@@ -8,10 +8,9 @@
          <input type="text" name="input" class="input" id="search-input">
          <button type="reset" class="search" id="search-btn"></button>
          </form>-->
-
-{% load staticfiles %}
 {% block contents %}
 
+<<<<<<< HEAD
 
 
      <!--1-->
@@ -58,34 +57,30 @@
 
 
 
+=======
+>>>>>>> c59f504addbb699bdda8326d705f370dc2bff4de
     
-     
-     <!-- <div class = "row">
-      {% for post_main in main_post.all %}
-
+     <!--1-->
+     <div class="row">
+        {% for post in postss %}
+        
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-    
-            <img src="{{ post_main.image.url }}" alt="..." class="img-thumbnail">
+            <img class="card-img-top" src="{{ post.image.url }}" alt=" Card image cap">
             <div class="card-body">
-            <h5>{{ post_main.title }}</h5>
-              <p class="card-text">{{ post_main.summary }}</p>
-           
+            <h5>{{ post.title }}</h5>
+              <p class="card-text">{{ post.summary }}</p>
               <div class="d-flex justify-content-between align-items-center">
-               <small class="text-muted">{{post_main.area}}</small>
-                
+              <small class="text-muted">카페 위치 넣는 자리 </small>
+                <a class="alert alert-danger" href="{% url 'detail' post.id %}" role="button"> 자세히 보기</a>
                 
               </div>
             </div>
           </div>
         </div>
-   
-            {% endfor %}
-         </div>
-      </div>-->
-   
-    
-        
+        {% endfor %}
+    </div>
+
         <!--2--> 
         <div class="mt-5 pt-5">
             <div class="container">
