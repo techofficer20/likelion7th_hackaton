@@ -19,6 +19,8 @@ class Post(models.Model):
     def summary(self):
         return self.body[:20]
 
+        
+
 
 class Comment(models.Model):
     comment = models.CharField(max_length=200, blank=True)
