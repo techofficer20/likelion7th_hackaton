@@ -91,10 +91,10 @@
     <br><br>
     <div>
         {%if postss.has_previous%}
-        <a class="alert alert-danger" href="?page={{postss.previous_page_number}}" role="button">이전 페이지</a>
+        <a class="alert alert-light" href="?page={{postss.previous_page_number}}" role="button">이전 페이지</a>
         {%endif%}
 
-        <a class="alert alert-danger">
+        <a class="alert alert-light">
             <span>{{postss.number}}</span>
             <span> / </span>
             <span>{{postss.paginator.num_pages}}</span>

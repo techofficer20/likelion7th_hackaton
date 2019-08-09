@@ -8,19 +8,13 @@
   background: #003366;
 }
 
-.choice h1 {
-  font-family: "Shift", sans-serif;
-  text-align: center;
-  font-weight: bold;
-  padding-top: 50px;
-}
-
 .logo h1 {
-  font-family: "Shift", sans-serif;
   text-align: center;
-  font-weight: bold;
   font-size: 80px;
   line-height: 300px;
+  font-style: normal;
+  font-family: "Lato", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
   color: #fff;
 }
 .choice {
@@ -43,6 +37,8 @@
 .pull-right ul {
   display: inline;
   padding-top: 10px;
+  color: black;
+  font-weight: bold;
 }
 /*
 .pull-right img {

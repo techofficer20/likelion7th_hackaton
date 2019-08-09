@@ -40,13 +40,14 @@
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 <script type="text/javascript"
     src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=lhwqucyuvi"></script>
-       
+    <!--font-->
+     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Lato&display=swap" rel="stylesheet">
         
 
         <!--header-->
          <div class ="head">
         <ul class="pull-right">
-       <li><img src = "{% static 'cafe.png'%}" width="60px" height="60px" ></li>
+       <li><img src = "{% static 'cafe.png'%}" width="60px" height="60px" >오늘의 다방</li>
                 
 
             {% if user.is_authenticated %}
@@ -83,7 +84,7 @@
     <div class = "header">
        
         <div class = "logo">
-           <h1>Cafe Project</h1>
+           <h1>오늘의 다방</h1>
             
 
         </div>
