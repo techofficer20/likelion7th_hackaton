@@ -33,6 +33,178 @@
     <div class="alert alert-danger" role="alert">
         <img class="img-fluid rounded mb-3 mb-md-0" style="width:100%; max-width:300px; height:100%; max-height:300px;"
             src="{{post.image.url}}" alt="">
+                <!--API-->
+
+
+            <div id="map" style="width:600px;height:300px;float:right; "></div>
+            
+            <br><br><br>
+
+            <!--<script>
+                var mapOptions = {
+                    center: new naver.maps.LatLng(37.3595704, 127.105399),
+                    zoom: 10
+                };
+
+                var map = new naver.maps.Map('map', mapOptions);
+            </script>
+            <h5>{{ post.body }}</h5>
+            <br>
+-->
+
+
+
+<script>
+    (function () {
+     var jeju = new naver.maps.LatLng(37.6353516,126.5177404,17),
+         busan = new naver.maps.LatLng(37.6095752,126.4781153,17),
+         seoul = new naver.maps.LatLng(37.5359232,126.936641,12),
+         gyunggi = new naver.maps.LatLng(37.275052,127.009447);
+
+     var nuriPoint = new naver.maps.LatLng(37.5795423, 126.8897844);
+     var sbsPoint = new naver.maps.LatLng(37.579847, 126.8929304);
+     var kicPoint =  new naver.maps.LatLng(37.3849483, 127.1229117);
+     var kic2Point =  new naver.maps.LatLng(37.5670089,126.9775292,17);
+     var kic3Point =  new naver.maps.LatLng(37.283472,127.0142649,17);
+     var kic4Point =  new naver.maps.LatLng(37.375042,127.139447);
+
+     var middlePoint = new naver.maps.LatLng(37.5666805, 126.9784147);
+
+     var map = new naver.maps.Map('map', {
+         center: middlePoint,
+         zoom: 11,
+         enableWheelZoom: true,
+         enableDragPan: true,
+         enableDblClickZoom: false,
+         mapMode: 0,
+         activateTrafficMap: false,
+         activateBicycleMap: false,
+         minMaxLevel: [1, 14],
+         zoomControl: true,
+         zoomControlOptions: {
+             position: naver.maps.Position.TOP_RIGHT
+         }
+     });
+
+     $("#to-jeju").on("click", function(e) {
+         e.preventDefault();
+         map.setZoom(6, true);
+         map.setCenter(jeju);
+     });
+
+     $("#to-1").on("click", function(e) {
+         e.preventDefault();
+         map.setZoom(11, true);
+     });
+     
+     $("#to-busan").on("click", function(e) {
+         e.preventDefault();
+         map.panTo(busan);
+     });
+     $("#to-Gyunggi").on("click", function(e) {
+         e.preventDefault();
+         map.panTo(gyunggi);
+     });
+     $("#to-seoul").on("click", function(e) {
+         e.preventDefault();
+         map.setZoom(6, true);
+         map.panTo(seoul);
+     });
+
+     $("#panBy").on("click", function(e) {
+         e.preventDefault();
+
+         map.panBy(new naver.maps.Point(10, 10));
+     });
+
+
+     new naver.maps.Marker({
+         position: nuriPoint,
+         icon: {
+             content: '<div style="width:100px;"><img src="" alt="" ' +
+             'style="margin: 0; padding: 0; border: 0 solid transparent; display: block; max-width: none; ' +
+             'max-height: none; -webkit-user-select: none; position: absolute; width: 22px; height: 35px; left: 0; top: 0;"/>' +
+             '<div style="position: absolute; top: 40px; left: -60px; color: black; font-weight: bold; font-size: 40px;"><a href="https://www.instagram.com/maehwamareum123/">📌</a></div></div>',
+             size: new naver.maps.Size(28, 37),
+             anchor: new naver.maps.Point(11, 35)
+         },
+         map: map
+     });
+
+     new naver.maps.Marker({
+         position: sbsPoint,
+         icon: {
+             content: '<div style="width:100px;"><img src="" alt="" ' +
+             'style="margin: 0; padding: 0; border: 0 solid transparent; display: block; max-width: none; ' +
+             'max-height: none; -webkit-user-select: none; position: absolute; width: 22px; height: 35px; left: 0; top: 0;"/>' +
+             '<div style="position: absolute; top: 40px; left: -30px; color: black; font-weight: bold; font-size: 40px;"><a href="https://www.instagram.com/ganghwa_greenholiday/">📌</a></div></div>',
+             size: new naver.maps.Size(28, 37),
+             anchor: new naver.maps.Point(11, 35)
+         },
+         map: map
+     });
+
+     new naver.maps.Marker({
+         position: kicPoint,
+         icon: {
+             content: '<div style="width:100px;"><img src="" alt="" ' +
+             'style="margin: 0; padding: 0; border: 0 solid transparent; display: block; max-width: none; ' +
+             'max-height: none; -webkit-user-select: none; position: absolute; width: 22px; height: 35px; left: 0; top: 0;"/>' +
+             '<div style="position: absolute; top: 40px; left: -30px; color: black; font-weight: bold; font-size: 40px;"><a href="https://m.blog.naver.com/PostView.nhn?blogId=yeanzz&logNo=221451115648&proxyReferer=https%3A%2F%2Fwww.google.com%2F">📌</a></div></div>',
+             size: new naver.maps.Size(28, 37),
+             anchor: new naver.maps.Point(11, 35)
+         },
+         map: map
+     });
+
+     new naver.maps.Marker({
+         position: kic2Point,
+         icon: {
+             content: '<div style="width:100px;"><img src="" alt="" ' +
+             'style="margin: 0; padding: 0; border: 0 solid transparent; display: block; max-width: none; ' +
+             'max-height: none; -webkit-user-select: none; position: absolute; width: 22px; height: 35px; left: 0; top: 0;"/>' +
+             '<div style="position: absolute; top: 40px; left: -30px; color: black; font-weight: bold; font-size: 40px;"><a href="http://blog.naver.com/PostView.nhn?blogId=leesaelom&logNo=221375569142">📌</a></div></div>',
+             size: new naver.maps.Size(28, 37),
+             anchor: new naver.maps.Point(11, 35)
+         },
+         map: map
+     });
+
+     new naver.maps.Marker({
+         position: kic3Point,
+         icon: {
+             content: '<div style="width:100px;"><img src="" alt="" ' +
+             'style="margin: 0; padding: 0; border: 0 solid transparent; display: block; max-width: none; ' +
+             'max-height: none; -webkit-user-select: none; position: absolute; width: 22px; height: 35px; left: 0; top: 0;"/>' +
+             '<div style="position: absolute; top: 40px; left: -30px; color: black; font-weight: bold; font-size: 40px;"><a href="https://store.naver.com/restaurants/detail?id=36988117">📌</a></div></div>',
+             size: new naver.maps.Size(28, 37),
+             anchor: new naver.maps.Point(11, 35)
+         },
+         map: map
+     });
+
+     new naver.maps.Marker({
+         position: kic4Point,
+         icon: {
+             content: '<div style="width:100px;"><img src="" alt="" ' +
+             'style="margin: 0; padding: 0; border: 0 solid transparent; display: block; max-width: none; ' +
+             'max-height: none; -webkit-user-select: none; position: absolute; width: 22px; height: 35px; left: 0; top: 0;"/>' +
+             '<div style="position: absolute; top: 40px; left: -30px; color: black; font-weight: bold; font-size: 40px;"><a href="https://www.instagram.com/hongrard/">📌</a></div></div>',
+             size: new naver.maps.Size(28, 37),
+             anchor: new naver.maps.Point(11, 35)
+         },
+         map: map
+     });
+ })();
+
+ </script>
+
+       
+
+
+        <!--API-->
+    
+    
         <br><br><br>
         <h5>{{ post.body }}</h5>
         <br>
@@ -55,14 +227,16 @@
        
         {% endfor %}
            <br>
-       <!--댓글 폼 -->
+   <!--댓글폼-->
+   <br>
+   <br>
     <form action="{% url 'comment' post_id %}" method="POST"> 
       {% csrf_token %}
          <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="덧글을 남겨주세요!" name="text" id="text" aria-describedby="button-addon2">
           </input>
           <div class="button1">
-             <input  type="submit" value="댓글"></input>
+             <input type="submit" value="댓글"></input>
           </div>
       </div>
       </form>
