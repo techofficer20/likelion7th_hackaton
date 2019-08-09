@@ -29,13 +29,13 @@
         <fieldset>
             <legend>feature</legend>
             {% for feature in feature_list %}
-            <input type="radio" name="features" value="{{feature.feature}}">{{feature.feature}}
+            <input type="radio" name="feature" value="{{feature.feature}}" required>{{feature.feature}}
             {% endfor %}
         </fieldset>
         <fieldset>
             <legend>star</legend>
             {% for star in star_list %}
-            <input type="radio" name="star" value="{{star.star}}">{{star.star}}
+            <input type="radio" name="star" value="{{star.star}}" required>{{star.star}}
             {% endfor %}
         </fieldset>
         <br />
@@ -47,14 +47,7 @@
     <li>{{ post_obj.title }} - {{ post_obj.location }} (feature: {{ post_obj.feature }}) star: {{post_obj.starrate}}
     </li>
     {% endfor %}
-    <h3 id="result">"{{ obj }}"에 대한 검색 결과입니다.</h3> <!-- views.py에서 불러들인 데이터를 사용 -->
-    {% for result_obj in post %}
-        {% if result_obj.location == obj %}
-            <h2>찾음</h2>
-        {% else %}
-            <h3>없음</h3>
-        {% endif %}
-    {% endfor %}
+    <h3 id = "result">location: "{{obj_location}}", feature: "{{obj_feature}}" 검색 결과입니다.</h3>
 </body>
 
 </html>
