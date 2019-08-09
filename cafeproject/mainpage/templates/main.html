@@ -2,6 +2,8 @@
 {% block import %}
 {% endblock%}
 
+{% load staticfiles %}
+
          <!--1-->
 
          <!--<form id="content">
@@ -10,6 +12,33 @@
          </form>-->
 {% block contents %}
 
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">NAME</h4>
+      </div>
+      <div class="card-body">
+      <img src="{% static '1.jpeg'%}" height="310px" width="310px">
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">NAME</h4>
+      </div>
+      <div class="card-body">
+        <img src="{% static '2.jpeg'%}" height="310px" width="310px">
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">NAME</h4>
+      </div>
+      <div class="card-body">
+       <img src="{% static '3.png'%}" height="310px" width="310px">
+      </div>
+    </div>
+  </div>
 
 
 

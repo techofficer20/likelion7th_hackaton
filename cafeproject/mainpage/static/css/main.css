@@ -43,6 +43,10 @@
   display: inline;
   padding-top: 10px;
 }
+/*
+.pull-right img {
+  padding-left: 50px;
+}*/
 .pull-right a {
   color: black;
   font-display: right;
