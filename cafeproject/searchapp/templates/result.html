@@ -29,13 +29,13 @@
         <fieldset>
             <legend>feature</legend>
             {% for feature in feature_list %}
-            <input type="radio" name="feature" value="{{feature.feature}}" required>{{feature.feature}}
+            <input type="radio" name="feature" value="{{feature.feature}}">{{feature.feature}}
             {% endfor %}
         </fieldset>
         <fieldset>
             <legend>star</legend>
             {% for star in star_list %}
-            <input type="radio" name="star" value="{{star.star}}" required>{{star.star}}
+            <input type="radio" name="star" value="{{star.star}}">{{star.star}}
             {% endfor %}
         </fieldset>
         <br />
@@ -47,7 +47,11 @@
     <li>{{ post_obj.title }} - {{ post_obj.location }} (feature: {{ post_obj.feature }}) star: {{post_obj.starrate}}
     </li>
     {% endfor %}
+    {% if obj_location == 'None' and obj_feature == 'None' %}
+    <h3 id = "result">location, feature 모두 None이기 때문에 다시 검색하셔야 합니다.</h3>
+    {% else %}
     <h3 id = "result">location: "{{obj_location}}", feature: "{{obj_feature}}" 검색 결과입니다.</h3>
+    {% endif %}
 </body>
 
 </html>
