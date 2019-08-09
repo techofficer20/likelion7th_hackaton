@@ -11,10 +11,10 @@
 
 <br><br>
 <div class="container">
-    <div class="alert alert-danger" role="alert">
-        <h4> 👑 BEST 👑 </h4>
+    <div class="alert alert-light" role="alert">
+        <h4>  BEST  </h4>
     </div>
-    <div class = "alert alert-danger" role = "alert">
+    <div class = "alert alert-light" role = "alert">
     <form action="{% url 'result' %}" method="GET">
         <fieldset>
             <legend>name</legend>
@@ -33,7 +33,7 @@
     </form>
     </div>
     <br>
-    <a class="alert alert-danger" href="{% url 'write' %}" role="button"> POST </a>
+    <a class="alert alert-light" href="{% url 'write' %}" role="button"> POST </a>
     <div>
         <br><br>
         <div class="row">
@@ -52,7 +52,7 @@
 
                         <div class="d-flex justify-content-between align-items-center">
                             <small class="text-muted">{{post.area}}</small>
-                            <a class="alert alert-danger" href="{% url 'detail' post.id %}" role="button"> 자세히 보기</a>
+                            <a class="alert alert-light" href="{% url 'detail' post.id %}" role="button"> 자세히 보기</a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
         </a>
 
         {%if postss.has_next%}
-        <a class="alert alert-danger" href="?page={{postss.next_page_number}}" role="button">다음 페이지</a>
+        <a class="alert alert-light" href="?page={{postss.next_page_number}}" role="button">다음 페이지</a>
         {%endif%}
         <br><br><br>
     </div>

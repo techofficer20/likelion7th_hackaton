@@ -5,7 +5,7 @@
         <title>hackaton sample</title>
         <!--head부분 css/bootstrap 스크립트 추가부분 따로 빼던가 안빼도 되고-->
          {% load staticfiles %}
-         <link rel="stylesheet" href="{% static 'css/main.css' %}?ver=1.7" >
+         <link rel="stylesheet" href="{% static 'css/main.css' %}?ver=1.8" >
          <script type="text/javascript" src="{% static "js/main.js" %}"></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,7 +53,7 @@
             
             <li class="pull-left"><a href="{% url 'logout' %}">logout</a></li>
             <li class="pull-left"><a href="{% url 'post' %}">POST</a></li>
-            <li class="pull-left"><a href="{% url 'main' %}">HOME</a></li>
+            <li class="pull-left"><a href="{% url 'postmain' %}">HOME</a></li>
             <li class="pull-left"><a href="{% url 'post' %}">환영합니다. {{ user.username }} 님!</a></li>
             <form id="logout" method="POST" action="{% url 'logout' %}">
                 {% csrf_token %} <input type="hidden" />
@@ -64,7 +64,7 @@
              <li class="pull-left"><a href="{% url 'signup' %}">signup</a></li>
             <li class="pull-left"><a href="{% url 'login' %}">login</a></li>
             <li class="pull-left"><a href="{% url 'post' %}">POST</a></li>
-            <li class="pull-left"><a href="{% url 'main' %}">HOME</a></li>
+            <li class="pull-left"><a href="{% url 'postmain' %}">HOME</a></li>
             
             {% endif %}
 

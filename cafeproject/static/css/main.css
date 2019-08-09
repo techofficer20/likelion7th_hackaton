@@ -5,7 +5,7 @@
 }
 .logo {
   height: 100%;
-  background: #ffcccc;
+  background: #003366;
 }
 
 .choice h1 {
@@ -21,6 +21,7 @@
   font-weight: bold;
   font-size: 80px;
   line-height: 300px;
+  color: #fff;
 }
 .choice {
   height: 150px;

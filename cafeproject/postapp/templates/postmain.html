@@ -11,20 +11,23 @@
          <button type="reset" class="search" id="search-btn"></button>
          </form>-->
 {% block contents %}
-
+<!--사진 반복-->
 <div class="container">
 
   <div class="card-deck mb-3 text-center">
-  {% for post in postss %}
+   {% for post in postss %}
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">{{post.title}}</h4>
+        <h6 class="my-0 font-weight-normal">{{post.title}}</h6>
       </div>
       <div class="card-body">
       <img src="{{ post.image.url }}" height="310px" width="310px">
       </div>
     </div>
+    
     {% endfor %}
+    
+
   </div>
 
 
@@ -34,70 +37,6 @@
 
 
   
-
-        <!--2--> 
-        <div class="mt-5 pt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 p-0">
-                        <div class="text-center">
-                            <figure class="pt-3">
-                                <i class="fas fa-cat mb-4 comments-icon"></i>
-                            </figure>
-                            <div>
-                                <h5 class="font-weight-bold">내용</h5>
-                            </div>
-                            <div class="text-muted px-2 detail-description">
-                                <p>어쩌고저쩌고는 어쩌고저쩌곤데 어쩌고저쩌고가 어쩌고저꺼고</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 p-0">
-                        <div class="text-center">
-                            <figure class="pt-3">
-                                <i class="fas fa-gift mb-4 user-check-icon"></i>
-                            </figure>
-                            <div>
-                                <h5 class="font-weight-bold">내용</h5>
-                            </div>
-                            <div class="text-muted px-2 detail-description">
-                                <p>어쩌고저쩌고는 어쩌고저쩌곤데 어쩌고저쩌고가 어쩌고저꺼고</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 p-0">
-                        <div class="text-center">
-                            <figure class="pt-3">
-                                <i class="fas fa-store mb-4 fingerprint-icon"></i>
-                            </figure>
-                            <div>
-                                <h5 class="font-weight-bold">내용</h5>
-                            </div>
-                            <div class="text-muted px-2 detail-description">
-                                <p>어쩌고저쩌고는 어쩌고저쩌곤데 어쩌고저쩌고가 어쩌고저꺼고 </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!--end-->
-
-   
-   <!--나중에 추가할 main부분 생길시 이 container에서 작업-->
-<center>
-    <div class="container">
-        <div class = "body">
-             
-        
-             
-        </div>
-    
-
-    </div>
-</center>
 
 <!--지울수 있으면 지우고 아니면 그냥 두고 -->
    <div class ="footer">
