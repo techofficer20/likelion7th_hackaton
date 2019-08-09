@@ -50,12 +50,14 @@
                 
 
             {% if user.is_authenticated %}
+            
             <li class="pull-left"><a href="{% url 'logout' %}">logout</a></li>
             <li class="pull-left"><a href="{% url 'post' %}">POST</a></li>
+            <li class="pull-left"><a href="{% url 'main' %}">HOME</a></li>
             <li class="pull-left"><a href="{% url 'post' %}">환영합니다. {{ user.username }} 님!</a></li>
             <form id="logout" method="POST" action="{% url 'logout' %}">
                 {% csrf_token %} <input type="hidden" />
-            <li class="pull-left"><a href="{% url 'main' %}">HOME</a></li>
+            
             </form>
 
             {% else %}
