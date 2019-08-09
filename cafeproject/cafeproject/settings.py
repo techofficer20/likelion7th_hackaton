@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'searchapp.apps.SearchappConfig',
     'mainpage.apps.MainpageConfig',
     'startpage.apps.StartpageConfig',
     'tagapp.apps.TagappConfig',

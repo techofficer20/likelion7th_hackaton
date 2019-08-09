@@ -12,6 +12,16 @@ def post(request):
     postss = paginator.get_page(page)
     return render(request, 'post.html', {'posts': posts, 'postss': postss, })
 
+def result(request):
+    obj_title = request.GET.get('title')
+    obj_location = request.GET.get('location')
+    obj_feature = request.GET.get('feature')
+    posts = Post.objects
+    post_list = Post.objects.all()
+    paginator = Paginator(post_list, 3)
+    page = request.GET.get('page')
+    postss = paginator.get_page(page)
+    return render(request, 'result.html', {'obj_title' : obj_title, 'posts' : posts, 'postss' : postss, 'obj_location' : obj_location, 'obj_feature' : obj_feature})
 
 def detail(request, post_id):
     detail = get_object_or_404(Post, pk=post_id)
