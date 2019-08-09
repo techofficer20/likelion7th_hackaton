@@ -9,30 +9,34 @@
 <body>
     <form action = "{% url 'result' %}" method="GET">
         <fieldset>
-            <legend>location</legend>
-             {% for location in location_list %}
-             <input type = "radio" name = "location" value = "{{location.location}}">{{location.location}}
-             {% endfor %}
-        </fieldset>
-        <fieldset>
-            <legend>feature</legend>
-             {% for feature in feature_list %}
-             <input type = "radio" name = "feature" value= "{{feature.feature}}">{{feature.feature}}
-             {% endfor %}
-        </fieldset>
-        <fieldset>
-            <legend>star</legend>
-             {% for star in star_list %}
-             <input type = "radio" name = "star" value= "{{star.star}}">{{star.star}}
-             {% endfor %}
+            <legend>title</legend>
+            <input type="text" name = "title" placeholder = "title을 입력하세요" required>
         </fieldset>
         <br/>
+        <fieldset>
+            <legend>location</legend>
+            <input type="text" name = "location" placeholder="location을 입력하세요" required>
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>feature</legend>
+            <input type="text" name = "feature" placeholder="feature를 입력하세요" required>
+        </fieldset>
         <input type="submit" value="tag searh">
     </form>
         <br/>
     <h2>현재 카페 목록</h2>
     {% for post_obj in post %}
-        <li>{{ post_obj.title }} - {{ post_obj.location }} (feature: {{ post_obj.feature }}) star: {{post_obj.starrate}}</li>
+    <fieldset>
+            <legend>{{post_obj.title}}</legend>
+            location: {{post_obj.location}}
+            <br />
+            feature: {{post_obj.feature}}
+            <br />
+            description: {{post_obj.description}}
+            <br />
+        </fieldset>
+        <br />
     {% endfor %}
 </body>
 </html>
