@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 Django==2.2.3
+=======
+Django==2.2.4
+>>>>>>> 23e382b2f47ec7a1fc5e0896c940a1cd3872ab24
 django-taggit==1.1.0
 django-taggit-templatetags==0.2.5
 django-templatetag-sugar==1.0
 Pillow==6.1.0
+<<<<<<< HEAD
 pytz==2019.1
+=======
+pytz==2019.2
+>>>>>>> 23e382b2f47ec7a1fc5e0896c940a1cd3872ab24
 sqlparse==0.3.0
