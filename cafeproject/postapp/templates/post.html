@@ -14,6 +14,7 @@
     <div class="alert alert-danger" role="alert">
         <h4> 👑 BEST 👑 </h4>
     </div>
+    <div class = "alert alert-danger" role = "alert">
     <form action="{% url 'result' %}" method="GET">
         <fieldset>
             <legend>name</legend>
@@ -28,8 +29,9 @@
             <input type="text" name='feature' placeholder="카페 태그를 입력하세요" required>
         </fieldset>
         <br />
-        <input type="submit" value="search">
+        <input type="submit" value="search" class = "btn btn-dark">
     </form>
+    </div>
     <br>
     <a class="alert alert-danger" href="{% url 'write' %}" role="button"> POST </a>
     <div>
