@@ -22,7 +22,6 @@ def result(request):
     star_list = Star.objects.all()
     obj_location = request.GET['location'] # 검색어 데이터 얻어냄
     obj_feature = request.GET['feature']
-    print(obj_location)
     return render(request, 'result.html', 
     {
         'post' : post,
