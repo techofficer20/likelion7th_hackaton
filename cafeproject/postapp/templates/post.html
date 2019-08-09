@@ -14,22 +14,24 @@
     <div class="alert alert-danger" role="alert">
         <h4> 👑 BEST 👑 </h4>
     </div>
+    <div class = "alert alert-danger" role = "alert">
     <form action="{% url 'result' %}" method="GET">
         <fieldset>
             <legend>name</legend>
-            <input type="text" name='title' placeholder="카페 이름을 입력하세요" required>
+            <input type="text" name='title' placeholder="카페 이름을 입력하세요" class = "form-control" required>
         </fieldset>
         <fieldset>
             <legend>location</legend>
-            <input type="text" name='location' placeholder="카페 위치를 입력하세요" required>
+            <input type="text" name='location' placeholder="카페 위치를 입력하세요" class = "form-control" required>
         </fieldset>
         <fieldset>
             <legend>feature</legend>
-            <input type="text" name='feature' placeholder="카페 태그를 입력하세요" required>
+            <input type="text" name='feature' placeholder="카페 태그를 입력하세요" class = "form-control" required>
         </fieldset>
         <br />
-        <input type="submit" value="search">
+        <input type="submit" value="search" class = "btn btn-dark">
     </form>
+    </div>
     <br>
     <a class="alert alert-danger" href="{% url 'write' %}" role="button"> POST </a>
     <div>
