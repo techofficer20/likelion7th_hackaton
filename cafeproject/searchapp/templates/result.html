@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <h3 id = "result">"{{ obj }}"에 대한 검색 결과입니다.</h3> <!-- views.py에서 불러들인 데이터를 사용 -->
-    {% for post_obj in post %} 
-        
-        {% if post_obj.title == obj_list.0 and post_obj.location == obj_list.1 and post_obj.tag_body == obj_list.2 %}
-            <li>{{post_obj.title}} - {{post_obj.location}} (태그: {{post_obj.tag_body}}) star: {{post_obj.starrate}}</li>
-        {% endif %}
-        
-        {% if post_obj.title == obj or post_obj.location == obj or post_obj.tag_body == obj %}
-            <li>{{post_obj.title}} - {{post_obj.location}} (태그: {{post_obj.tag_body}}) star: {{post_obj.starrate}}</li>
-        {% else %}
-            <h4>검색 결과가 없습니다.</h4>
-        {% endif %}
+    <form action="{% url 'result' %}" method="GET">
+        <fieldset>
+            <legend>location</legend>
+            {% for location in location_list %}
+            <input type="radio" name="location" value="{{location.location}}">{{location.location}}
+            {% endfor %}
+        </fieldset>
+        <fieldset>
+            <legend>feature</legend>
+            {% for feature in feature_list %}
+            <input type="radio" name="feature" value="{{feature.feature}}">{{feature.feature}}
+            {% endfor %}
+        </fieldset>
+        <fieldset>
+            <legend>star</legend>
+            {% for star in star_list %}
+            <input type="radio" name="star" value="{{star.star}}">{{star.star}}
+            {% endfor %}
+        </fieldset>
+        <br />
+        <input type="submit" value="tag searh">
+    </form>
+    <br />
+    <h2>현재 카페 목록</h2>
+    {% for post_obj in post %}
+    <li>{{ post_obj.title }} - {{ post_obj.location }} (feature: {{ post_obj.feature }}) star: {{post_obj.starrate}}
+    </li>
     {% endfor %}
+    {% if obj_location == 'None' and obj_feature == 'None' %}
+    <h3 id = "result">location, feature 모두 None이기 때문에 다시 검색하셔야 합니다.</h3>
+    {% else %}
+    <h3 id = "result">location: "{{obj_location}}", feature: "{{obj_feature}}" 검색 결과입니다.</h3>
+        {% for post_obj in post %}
+            {% if post_obj.location == obj_location %}
+            <li>{{ post_obj.title }} - {{ post_obj.location }} (feature: {{ post_obj.feature }}) star: {{post_obj.starrate}}</li>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
 </body>
+
 </html>
