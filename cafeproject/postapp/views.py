@@ -47,3 +47,17 @@ def comment(request, post_id):
         return redirect('/detail/'+str(post_id))
         # else:
         # return redirect('signin')
+
+
+def like(request, post_id):
+   #post = get_object_or_404(Post, pk=post_id)
+    post = Post.objects.get(pk=post_id)
+    if post.user.filter(username=request.user.username).exists():
+        post.user.remove(request.user)
+        message = '취소하였습니다'
+    else:
+        post.user.add(request.user)
+        message = '좋아요'
+    post.save()
+    context = {'like_count': post.total_likes, 'message': message}
+    return redirect('detail', post_id)

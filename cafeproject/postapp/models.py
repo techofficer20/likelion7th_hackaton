@@ -8,6 +8,10 @@ class Post(models.Model):
     image = models.ImageField(upload_to='images/', null=True)
     body = models.TextField()
     area = models.CharField(max_length=30, null=True)
+    user = models.ManyToManyField(User, blank=True)
+
+    def total_likes(self):
+        return self.user.count()
 
     def __str__(self):
         return self.title

@@ -32,6 +32,7 @@ urlpatterns = [
     path('post/write/', postapp.views.write, name="write"),
     path('post/create/', postapp.views.create, name='create'),
     path('post/comment/<int:post_id>', postapp.views.comment, name="comment"),
+    path('post/like/<int:post_id>', postapp.views.like, name="like"),
 
     path('accounts2/', include('accounts2.urls')),
 

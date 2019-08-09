@@ -6,6 +6,7 @@
 
 {% load staticfiles %}
 
+
 {% block contents %}
 
     <br><br>
@@ -21,7 +22,6 @@
         {% for post in postss %}
 
         
-        
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <!--<img class="card-img-top" src="{{ post.image.url }}" alt=" Card image cap">-->
@@ -29,8 +29,9 @@
             <div class="card-body">
             <h5>{{ post.title }}</h5>
               <p class="card-text">{{ post.summary }}</p>
-              <input type="image" src="{% static 'like.jpg'%}" height="30" width ="30" class="like" name="{{ post_id }}" value="Like">
-             <p id="count{{ post_id }}"> 좋아요 {{ post_id}} 개</p>
+              <!--<input type="image" src="{% static 'like.jpg'%}" height="30" width ="30" class="like" name="{{ post_id }}" value="Like">-->
+            <!--<p id="count{{ post.id }}"> 좋아요 {{ post.id}} 개</p>-->
+           
               <div class="d-flex justify-content-between align-items-center">
                <small class="text-muted">{{post.area}}</small>
                 <a class="alert alert-danger" href="{% url 'detail' post.id %}" role="button"> 자세히 보기</a>

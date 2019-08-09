@@ -3,7 +3,8 @@
 
 {% block import %}
 {% endblock%}
-
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/detail.css' %}?ver=1.6" >
 <!--BOOT STRAP-->
 
 <head>
@@ -35,6 +36,13 @@
         <br><br><br>
         <h5>{{ post.body }}</h5>
         <br>
+
+         <form action ="{% url 'like' post.id%}" method="get">
+            <!--<input type="hidden" name = 'like' value="{{user}}">-->
+            <!--<button type="image" src="{% static 'like.jpg'%}" height="30" width ="30"></button>-->
+            <input type="image" src="{% static 'like.jpg'%}" height="30" width ="30" name='like' value="{{user}}">
+              <p id="count{{ post.id }}"> 좋아요 {{post.total_likes}}개</p>
+              </form>
     </div>
     <br>
       <!--댓글달기 소스는 여기에--> 
@@ -53,8 +61,8 @@
          <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="덧글을 남겨주세요!" name="text" id="text" aria-describedby="button-addon2">
           </input>
-          <div class="input-group-append">
-             <input class="btn btn-outline-secondary" type="submit" id="button-addon2" value="댓글"></input>
+          <div class="button1">
+             <input  type="submit" value="댓글"></input>
           </div>
       </div>
       </form>
