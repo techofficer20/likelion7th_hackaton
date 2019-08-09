@@ -41,6 +41,11 @@
     <h3 id = "result">location, feature 모두 None이기 때문에 다시 검색하셔야 합니다.</h3>
     {% else %}
     <h3 id = "result">location: "{{obj_location}}", feature: "{{obj_feature}}" 검색 결과입니다.</h3>
+        {% for post_obj in post %}
+            {% if post_obj.location == obj_location %}
+            <li>{{ post_obj.title }} - {{ post_obj.location }} (feature: {{ post_obj.feature }}) star: {{post_obj.starrate}}</li>
+            {% endif %}
+        {% endfor %}
     {% endif %}
 </body>
 
