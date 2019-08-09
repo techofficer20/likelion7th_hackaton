@@ -205,11 +205,11 @@
         <!--API-->
     
     
-        <br><br><br>
-        <h5>{{ post.body }}</h5>
-        <br>
+    <br><br><br>
+    <h5>{{ post.body }}</h5>
+     <br>
 
-         <form action ="{% url 'like' post.id%}" method="get">
+    <form action ="{% url 'like' post.id%}" method="get">
             <!--<input type="hidden" name = 'like' value="{{user}}">-->
             <!--<button type="image" src="{% static 'like.jpg'%}" height="30" width ="30"></button>-->
             <input type="image" src="{% static 'like.jpg'%}" height="30" width ="30" name='like' value="{{user}}">
